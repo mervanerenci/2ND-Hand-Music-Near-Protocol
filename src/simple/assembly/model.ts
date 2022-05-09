@@ -50,6 +50,8 @@ export class Mics {
 
 /* Midis Start */ 
 
+@nearBindgen
+
 export class Midis {
     id: u32
     user: AccountId = context.sender
