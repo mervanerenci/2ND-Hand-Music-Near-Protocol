@@ -16,14 +16,14 @@ echo -----------------------------------------
 echo
 echo
 echo
-echo "1 more Midi"
+echo "1 more Midi added"
 echo -----------------------------------------
 echo -----------------------------------------
 echo
 echo
 echo
 near call $CONTRACT createMics '{"name":"beehive","price":"4","brand":"bee","stock":1}' --accountId $CONTRACT
-echo "Pants has been created"
+echo "Mics has been created"
 echo -----------------------------------------
 echo -----------------------------------------
 echo
@@ -34,5 +34,5 @@ echo -----------------------------------------
 echo -----------------------------------------
 echo
 echo
-echo "1 more Mic"
+echo "1 more Mic added"
 
