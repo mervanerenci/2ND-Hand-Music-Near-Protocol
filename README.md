@@ -1,6 +1,7 @@
 # Second Hand Music
 Welcome to Second Hand Music. You can sell or buy used music products on blockchain like microphones here.
-
+*NOTE FOR NCD LOOM VIDEO:*
+*there was a problem causing the createMidi function not to work properly. createMic was working so i didnt noticed at the first sight. In the loom video i didnt noticed that too. The problem was on the model.ts , i forgot to write @Nearbindgen to Midis class. I fixed it. I hope you can review this accordingly.*
 ## Deploying Smart Contract
 ### Build
 First, login your testnet account with:
