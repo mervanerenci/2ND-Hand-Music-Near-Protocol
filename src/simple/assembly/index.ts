@@ -34,9 +34,9 @@ export function purchaseMidisbyId(id:u32): number{
 /* Mics Start */
 
 
-export function createMics(name: string, price: u128, brand: string, stock: u8): Mics {
+export function createMics(name: string, price: u128, brand: string, stock: u8, condition: string, explanation: string): Mics {
   assert(price != u128.Zero, "This discount may not be welcomed by the bosses!")
-  return Mics.addMics( name, price, brand, stock);
+  return Mics.addMics( name, price, brand, stock, condition, explanation);
 
 }
 

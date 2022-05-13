@@ -22,14 +22,14 @@ echo -----------------------------------------
 echo
 echo
 echo
-near call $CONTRACT createMics '{"name":"beehive","price":"4","brand":"bee","stock":1}' --accountId $CONTRACT
+near call $CONTRACT createMics '{"name":"beehive","price":"4","brand":"bee","stock":1, "condition":"new", "explanation": "Closed pack"}' --accountId $CONTRACT
 echo "Mics has been created"
 echo -----------------------------------------
 echo -----------------------------------------
 echo
 echo
 echo
-near call $CONTRACT createMics '{"name":"c3","price":"5","brand":"samson","stock":2}' --accountId $CONTRACT
+near call $CONTRACT createMics '{"name":"c3","price":"5","brand":"samson","stock":2, "condition": "used", "explanation": "I bought this mic 3 years ago. Have few scratches."}' --accountId $CONTRACT
 echo -----------------------------------------
 echo -----------------------------------------
 echo

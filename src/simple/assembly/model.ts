@@ -20,16 +20,20 @@ export class Mics {
     price: u128
     brand: string
     stock: u8
-    constructor(name: string,  price: u128, brand: string, stock: u8) {
+    condition: string
+    explanation : string
+    constructor(name: string,  price: u128, brand: string, stock: u8, condition:string, explanation:string) {
         this.id = math.hash32<string>(name)
         this.price = price
         this.brand = brand
         this.stock = stock
         this.name = name
+        this.condition = condition
+        this.explanation = explanation
     }
 
-    static addMics(name: string,price: u128, brand: string, stock: u8): Mics {
-        const mics = new Mics(name, price, brand, stock);
+    static addMics(name: string,price: u128, brand: string, stock: u8, condition: string, explanation: string): Mics {
+        const mics = new Mics(name, price, brand, stock, condition, explanation);
         allmics.set(mics.id, mics)
         return mics;
     }
