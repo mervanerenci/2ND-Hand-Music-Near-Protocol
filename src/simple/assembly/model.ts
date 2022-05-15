@@ -140,6 +140,7 @@ export class Drums {
 
 
 /* Guitars Start */
+@nearBindgen
 export class Guitars {
     id: u32
     user: AccountId = context.sender
@@ -182,6 +183,7 @@ export class Guitars {
 
 
 /* Keyboards Start */
+@nearBindgen
 export class Keyboards {
     id: u32
     user: AccountId = context.sender
@@ -224,6 +226,7 @@ export class Keyboards {
 
 
 /* Interfaces Start */
+@nearBindgen
 export class Interfaces {
     id: u32
     user: AccountId = context.sender
@@ -266,6 +269,7 @@ export class Interfaces {
 
 
 /* Mixers Start */
+@nearBindgen
 export class Mixers {
     id: u32
     user: AccountId = context.sender
@@ -308,6 +312,7 @@ export class Mixers {
 
 
 /* Monitors Start */
+@nearBindgen
 export class Monitors {
     id: u32
     user: AccountId = context.sender
