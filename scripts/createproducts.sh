@@ -29,10 +29,10 @@ echo -----------------------------------------
 echo
 echo
 echo
-near call $CONTRACT createMics '{"name":"c3","price":"5","brand":"samson","stock":2, "condition": "used", "explanation": "I bought this mic 3 years ago. Have few scratches."}' --accountId $CONTRACT
+near call $CONTRACT createKeyboards '{"name":"c5","price":"10","brand":"KORG","stock":1, "condition": "used", "explanation": "I bought this mic 3 years ago. Have few scratches."}' --accountId $CONTRACT
 echo -----------------------------------------
 echo -----------------------------------------
 echo
 echo
-echo "1 more Mic added"
+echo "1 Keyboard Added"
 
