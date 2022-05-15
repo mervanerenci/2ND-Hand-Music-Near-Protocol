@@ -52,12 +52,12 @@ Step-3:
 
 *Creating Midis:*
     
-   near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" " }' --accountId $CONTRACT 
+   near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT  
     
 
  *Creating Mics*
     
-    near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT 
+    near call $CONTRACT createMics '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT 
  
  *Creating Other Products*
     
