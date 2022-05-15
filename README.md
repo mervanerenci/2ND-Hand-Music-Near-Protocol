@@ -2,6 +2,8 @@
 Welcome to Second Hand Music. You can sell or buy used music products on blockchain like microphones here.
 *NOTE FOR NCD LOOM VIDEO:*
 *there was a problem causing the createMidi function not to work properly. createMic was working so i didnt noticed at the first sight. In the loom video i didnt noticed that too. The problem was on the model.ts , i forgot to write @Nearbindgen to Midis class. I fixed it. I hope you can review this accordingly.*
+
+*Note 2: Updated Contract, added few more instruments and products.*
 ## Deploying Smart Contract
 ### Build
 First, login your testnet account with:
@@ -49,23 +51,31 @@ Step-3:
 
 *Creating Midis:*
     
-   near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" " }' --accountId $CONTRACT 
+   near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" " }' --accountId $CONTRACT 
     
 
  *Creating Mics*
     
-    near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" " }' --accountId $CONTRACT 
+    near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT 
+ 
+ *Creating Other Products*
     
-
-*Getting Mics/Midis*
+    near call $CONTRACT createKeyboards '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT
+                              Monitors 
+                              Mixers
+                              Drums
+                              Interfaces
+                              Guitars 
+ 
+ *Viewing Products*
     
     near view $CONTRACT getMics '{"offset": 0}' /// near view $CONTRACT getMidis '{"offset": 0}'
 
- *Getting Mics/Midis by Id*
+ *Getting Products by Id*
 
     near view $CONTRACT getMidisbyId '{"id":}' --accountId $CONTRACT
 
-*Purchase Mics/Midis*
+ *Purchase Products*
 
     near call $CONTRACT purchaseMicsbyId '{"id":""}' --accountId $CONTRACT --amount <amount here>
 

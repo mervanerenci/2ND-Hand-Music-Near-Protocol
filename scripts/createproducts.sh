@@ -29,7 +29,7 @@ echo -----------------------------------------
 echo
 echo
 echo
-near call $CONTRACT createKeyboards '{"name":"c5","price":"10","brand":"KORG","stock":1, "condition": "used", "explanation": "I bought this mic 3 years ago. Have few scratches."}' --accountId $CONTRACT
+near call $CONTRACT createKeyboards '{"name":"c5","price":"10","brand":"KORG","stock":1, "condition": "used", "explanation": "I bought this keys 3 years ago. Have few scratches."}' --accountId $CONTRACT
 echo -----------------------------------------
 echo -----------------------------------------
 echo
