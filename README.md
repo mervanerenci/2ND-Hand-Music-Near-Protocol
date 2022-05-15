@@ -50,10 +50,7 @@ Step-3:
 - near view getMicsbyname/getMidisbyname : view specific Mics or Midis via name
 - near call purchaseMidisbyname/purchaseMicsbyname : buy Midis or Mics via name
 
- *Creating Midis:*
-    
-   near call $CONTRACT createMidis '{"name":" ","price":" ","brand":" ","stock":" ", "condition":" ", "explanation":" "}' --accountId $CONTRACT  
-    
+ 
 
  *Creating Mics*
     
@@ -67,6 +64,7 @@ Step-3:
                               Drums
                               Interfaces
                               Guitars 
+                              Midis
  
  *Viewing Products*
     
