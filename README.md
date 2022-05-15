@@ -49,7 +49,7 @@ Step-3:
 - near view getMics/getMidis : view products
 - near view getMicsbyname/getMidisbyname : view specific Mics or Midis via name
 - near call purchaseMidisbyname/purchaseMicsbyname : buy Midis or Mics via name
-
+- You can buy, sell, view ; Mics, Midis, Drums, Keyboards, Guitars, Mixers, Monitors and Interfaces.
  
 
  *Creating Mics*
