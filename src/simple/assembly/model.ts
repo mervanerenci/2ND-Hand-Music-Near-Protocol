@@ -6,6 +6,7 @@ import { AccountId} from "../../utils";
 
 export let allmics = new PersistentUnorderedMap<u32, Mics>('mic')
 export let allmidis = new PersistentUnorderedMap<u32, Midis>('midi')
+export let alldrums = new PersistentUnorderedMap<u32, Drums>('drums')
 
 
 /* Mics Start */
@@ -88,4 +89,76 @@ export class Midis {
 
 
 }
+
+/* Drums Start */
+@nearBindgen
+
+export class Drums {
+    id: u32
+    user: AccountId = context.sender
+    name: string
+    price: u128
+    brand: string
+    stock: u8
+    condition: string
+    explanation : string
+    constructor(name: string,  price: u128, brand: string, stock: u8, condition:string, explanation:string) {
+        this.id = math.hash32<string>(name)
+        this.price = price
+        this.brand = brand
+        this.stock = stock
+        this.name = name
+        this.condition = condition
+        this.explanation = explanation
+    }
+
+    static addDrums(name: string,  price: u128, brand: string, stock: u8, condition:string, explanation:string): Drums{
+        const drums = new Drums(name, price, brand, stock, condition, explanation);
+        alldrums.set(drums.id, drums)
+        return drums;
+    }
+
+    static findDrums(offset: u32, limit: u32): Drums[] {
+        return alldrums.values(offset, offset + limit)
+    }
+
+    static findDrumsbyId(id: u32): Drums {
+        return alldrums.getSome(id);
+    }
+
+
+
+}
+
+/* Drums End */
+
+
+
+/* Guitars Start */
+
+/* Guitars End */
+
+
+
+/* Keyboards Start */
+
+/* Keyboards End */
+
+
+
+/* Interfaces Start */
+
+/* Interfaces End */
+
+
+
+/* Mixers Start */
+
+/* Mixers End */
+
+
+
+/* Monitors Start */
+
+/* Monitors End */
 

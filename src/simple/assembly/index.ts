@@ -1,5 +1,5 @@
 import { context, u128 } from "near-sdk-as";
-import { Mics, Midis, allmics, allmidis } from "./model";
+import { Mics, Midis, Drums, alldrums, allmics, allmidis } from "./model";
 
 
 /* Midis Start */
@@ -60,3 +60,28 @@ return mics.stock
 
 
 /* Mics End */
+
+/* Drums Start */
+export function createDrums(name: string, price: u128, brand: string, stock: u8, condition: string, explanation: string): Drums {
+  assert(price != u128.Zero, "This discount may not be welcomed by the bosses!")
+  return Drums.addDrums( name, price, brand, stock, condition, explanation);
+
+}
+
+export function getDrums(offset: u32, limit: u32 = 5): Drums[] {
+  return Drums.findDrums(offset, limit)
+}
+
+export function getDrumsbyId(id: u32): Drums {
+  return Drums.findDrumsbyId(id)
+}
+
+export function purchaseDrumsbyId(id:u32): number{
+const drums = alldrums.getSome(id)
+assert(context.attachedDeposit>=drums.price,"You have insufficient balance")
+
+if (context.attachedDeposit>=drums.price) {  
+  drums.stock = drums.stock -1
+}
+return drums.stock
+}
