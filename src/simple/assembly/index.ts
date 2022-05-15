@@ -85,3 +85,37 @@ if (context.attachedDeposit>=drums.price) {
 }
 return drums.stock
 }
+
+/* Drums End */
+
+
+
+
+/* Guitars Start */
+
+
+/* Guitars End */
+
+
+
+/* Keyboards Start */
+
+/* Keyboards End */
+
+
+
+/* Interfaces Start */
+
+/* Interfaces End */
+
+
+
+/* Mixers Start */
+
+/* Mixers End */
+
+
+
+/* Monitors Start */
+
+/* Monitors End */
